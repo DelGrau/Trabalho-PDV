@@ -22,7 +22,8 @@ public class SQLiteDataHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("");
+        sqLiteDatabase.execSQL("CREATE TABLE VENDEDOR (CODIGOVENDEDOR INTEGER, NOMEVENDEDOR VARCHAR(100))");
+        sqLiteDatabase.execSQL("CREATE TABLE PRODUTOS (CODIGOPRODUTO INTEGER, DESCRICAO VARCHAR(100), VALORPRODUTO DECIMAL)");
     }
 
     /**
