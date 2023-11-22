@@ -9,9 +9,7 @@ public class Pedido {
      * Serão as colunas da tabela no banco de dados
      */
     private int codigoPedido;
-    private ArrayList<Produtos> itensPedido;
-    private Vendedor vendedor;
-    private double valorPedido;
+    private int codigoCliente;
 
     public Pedido() {
     }
@@ -28,27 +26,11 @@ public class Pedido {
         this.codigoPedido = codigoPedido;
     }
 
-    public ArrayList<Produtos> getItensPedido() {
-        return itensPedido;
+    public int getCodigoCliente() {
+        return codigoCliente;
     }
 
-    public void setItensPedido(ArrayList<Produtos> itensPedido) {
-        this.itensPedido = itensPedido;
-    }
-
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-    public void setVendedor(Vendedor vendedor) {
-        this.vendedor = vendedor;
-    }
-
-    public double getValorPedido() {
-        return valorPedido;
-    }
-
-    public void setValorPedido(double valorPedido) {
-        this.valorPedido = valorPedido;
+    public void setCodigoCliente(int codigoCliente) {
+        this.codigoCliente = codigoCliente;
     }
 }
