@@ -7,6 +7,8 @@ public class Vendedor {
 
     private int codigoVendedor;
     private String nomeVendedor;
+    private String loginVendedor;
+    private String senhaVendedor;
 
     public Vendedor() {
     }
@@ -29,5 +31,21 @@ public class Vendedor {
 
     public void setNomeVendedor(String nomeVendedor) {
         this.nomeVendedor = nomeVendedor;
+    }
+
+    public String getLoginVendedor() {
+        return loginVendedor;
+    }
+
+    public void setLoginVendedor(String loginVendedor) {
+        this.loginVendedor = loginVendedor;
+    }
+
+    public String getSenhaVendedor() {
+        return senhaVendedor;
+    }
+
+    public void setSenhaVendedor(String senhaVendedor) {
+        this.senhaVendedor = senhaVendedor;
     }
 }
