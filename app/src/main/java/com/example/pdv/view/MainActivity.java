@@ -11,27 +11,16 @@ import com.example.pdv.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Variaveis
-    Button btNovoPedido;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btNovoPedido = findViewById(R.id.btNovoPedido);
-
-        btNovoPedido.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                abrirNovoPedido(view);
-            }
-        });
+        abrirView();
     }
 
-    public void abrirNovoPedido(View view) {
-        Intent intent = new Intent(MainActivity.this, NovoPedidoActivity.class);
-
+    public void abrirView () {
+        Intent intent = new Intent (MainActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 }
