@@ -8,8 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.appcompat.widget.ViewUtils;
-
 import com.example.pdv.helper.SQLiteDataHelper;
 import com.example.pdv.model.Cliente;
 
@@ -91,9 +89,9 @@ public class ClienteDao implements GenericDao<Cliente> {
     public long delete(Cliente obj) {
 
         try {
-            String[]identrificador = {String.valueOf(obj.getCodigoCliente())};
+            String[]identificador = {String.valueOf(obj.getCodigoCliente())};
 
-            return bd.delete(tableName, colunas[0]+" = ?", identrificador);
+            return bd.delete(tableName, colunas[0]+" = ?", identificador);
 
         } catch (SQLException ex) {
             Log.e("ERRO", "ERRO: ClienteDao.delete " + ex.getMessage());
