@@ -66,7 +66,7 @@ public class VendedorDao implements GenericDao<Vendedor>{
 
         try {
             ContentValues valores = new ContentValues();
-            valores.put(colunas[1], obj.getNomeVendedor()));
+            valores.put(colunas[1], obj.getNomeVendedor());
             valores.put(colunas[2], obj.getLoginVendedor());
             valores.put(colunas[3], obj.getSenhaVendedor());
 
