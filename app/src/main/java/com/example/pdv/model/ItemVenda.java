@@ -2,20 +2,12 @@ package com.example.pdv.model;
 
 public class ItemVenda {
 
-    private int codigoVenda;
     private int codigoPedido;
+    private int codigoProduto;
     private double quantidadeProduto;
     private double valorUnitario;
 
     public ItemVenda() {
-    }
-
-    public int getCodigoVenda() {
-        return codigoVenda;
-    }
-
-    public void setCodigoVenda(int codigoVenda) {
-        this.codigoVenda = codigoVenda;
     }
 
     public int getCodigoPedido() {
@@ -24,6 +16,14 @@ public class ItemVenda {
 
     public void setCodigoPedido(int codigoPedido) {
         this.codigoPedido = codigoPedido;
+    }
+
+    public int getCodigoProduto() {
+        return codigoProduto;
+    }
+
+    public void setCodigoProduto(int codigoProduto) {
+        this.codigoProduto = codigoProduto;
     }
 
     public double getQuantidadeProduto() {
