@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
  */
 public class SQLiteDataHelper extends SQLiteOpenHelper {
 
+
     public SQLiteDataHelper(@Nullable Context context, @Nullable String name,
                             @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -22,10 +23,18 @@ public class SQLiteDataHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE VENDEDOR  (CODIGOVENDEDOR INTEGER, NOMEVENDEDOR VARCHAR(100), LOGINVENDEDOR VARCHAR(100), SENHAVENDEDOR VARCHAR(100))");
-        sqLiteDatabase.execSQL("CREATE TABLE PRODUTOS  (CODIGOPRODUTO INTEGER, DESCRICAOPRODUTO VARCHAR(100), VALORPRODUTO DECIMAL)");
-        sqLiteDatabase.execSQL("CREATE TABLE CLIENTE   (CODIGOCLIENTE INTEGER, NOMECLIENTE VARCHAR(100), DOCUMENTOCLIENTE VARCHAR(100))");
-        sqLiteDatabase.execSQL("CREATE TABLE ITEMVENDA (CODIGOPEDIDO INTEGER, CODIGOPRODUTO INTEGER, QUANTIDADEPRODUTO INTEGER, VALORUNITARIO DOUBLE)");
+        sqLiteDatabase.execSQL("CREATE TABLE VENDEDOR  (CODIGOVENDEDOR INTEGER, " +
+                "NOMEVENDEDOR VARCHAR(100), LOGINVENDEDOR VARCHAR(100), SENHAVENDEDOR VARCHAR(100))");
+
+        sqLiteDatabase.execSQL("CREATE TABLE PRODUTOS  (CODIGOPRODUTO INTEGER, " +
+                "DESCRICAOPRODUTO VARCHAR(100), VALORPRODUTO DECIMAL)");
+
+        sqLiteDatabase.execSQL("CREATE TABLE CLIENTE   (CODIGOCLIENTE INTEGER, " +
+                "NOMECLIENTE VARCHAR(100), DOCUMENTOCLIENTE VARCHAR(100))");
+
+        sqLiteDatabase.execSQL("CREATE TABLE ITEMVENDA (CODIGOPEDIDO INTEGER, " +
+                "CODIGOPRODUTO INTEGER, QUANTIDADEPRODUTO INTEGER, VALORUNITARIO DOUBLE)");
+
         sqLiteDatabase.execSQL("CREATE TABLE PEDIDO    (CODIGOPEDIDO INTEGER, CODIGOCLIENTE INTEGER)");
     }
 
