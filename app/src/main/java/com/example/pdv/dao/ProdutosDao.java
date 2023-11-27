@@ -145,4 +145,8 @@ public class ProdutosDao implements GenericDao<Produtos>{
 
         return null;
     }
+
+    public int getLast() {
+        return this.getAll().size();
+    }
 }
